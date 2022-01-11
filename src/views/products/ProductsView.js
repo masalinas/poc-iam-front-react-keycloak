@@ -28,11 +28,11 @@ class Products extends Component {
         const keycloak = Keycloak('/keycloak.json');
 
         keycloak.onTokenExpired = () => {
-            console.log('Token expired', keycloak.token);
+            console.log('Token expired', keycloak.token, 'at ', new Date());
 
             keycloak.updateToken(180).then((refreshed) => {
                 if (refreshed) {                
-                    console.log('Successfully get a new token', keycloak.token);
+                    console.log('Successfully get a new token', keycloak.token, 'at ', new Date());
 
                     AuthService.instance.init(keycloak);
                 }
