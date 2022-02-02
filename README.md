@@ -45,8 +45,8 @@ npm start
 
 Custom Keycloak Login View Template
 
-![PoC Login View](captures/Poc_Login_View.png "PoC Login View")
+![PoC Login View](captures/Login_View.png "PoC Login View")
 
 Rect Front Products View
 
-![PoC Front View](captures/Poc_Front_View.png.png "PoC Front View")
+![PoC Front View](captures/Products_View.png "PoC Front View")
