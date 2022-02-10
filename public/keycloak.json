@@ -2,7 +2,7 @@
   "realm": "poc",
   "auth-server-url": "http://localhost:8080/auth/",
   "ssl-required": "external",
-  "resource": "front-react",
+  "resource": "poc-frontend",
   "public-client": true,
   "verify-token-audience": true,
   "use-resource-role-mappings": true,
