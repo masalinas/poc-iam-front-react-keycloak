@@ -1,6 +1,6 @@
 {
   "realm": "poc",
-  "auth-server-url": "http://localhost:8080/auth/",
+  "auth-server-url": "https://auth-poc.k8s.letsrebold.com/auth/",  
   "ssl-required": "external",
   "resource": "poc-frontend",
   "public-client": true,

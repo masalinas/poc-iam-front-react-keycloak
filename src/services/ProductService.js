@@ -5,15 +5,14 @@ import AuthService from './AuthService';
 //const API_AUTH_URL = "http://localhost:8082/api/"; //SpringBoot Microservice
 //const API_AUTH_URL = "https://localhost:8000/api/"; // PHP Microservice
 const API_AUTH_URL = "http://localhost:8001/"; // Python Microservice
-
-//const API_AUTH_URL = "http://poc-olive-business:8082/api/"; //SpringBoot Microservice
-//const API_AUTH_URL = "https://poc-olive-business-php:8000/api/"; // PHP Microservice
-//const API_AUTH_URL = "http://poc-olive-business-python:8001/"; // Python Microservice
+//const API_AUTH_URL = "https://app-business-python-poc.k8s.letsrebold.com/api/"; // Python Microservice
 
 export class ProductService {
-    getProducts() {        
+    getProducts() {
+        console.log(process.env.REACT_APP_API_AUTH_URL + "products");
+
         return axios            
-            .get(API_AUTH_URL + "products", { headers: AuthService.instance.getBearerHeader() })
+            .get(process.env.REACT_APP_API_AUTH_URL + "products", { headers: AuthService.instance.getBearerHeader() })
             .then(response => {
                 if (response.status === 200)
                     return response.data;                

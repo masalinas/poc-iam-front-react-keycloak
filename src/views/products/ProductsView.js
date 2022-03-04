@@ -25,7 +25,14 @@ class Products extends Component {
     }
 
     componentDidMount() {
-        const keycloak = Keycloak('/keycloak.json');
+        const config = {
+            "realm": "poc",
+            "url": process.env.REACT_APP_AUTH_SERVER_URL,            
+            "clientId": "poc-frontend"            
+        }
+
+        //const keycloak = Keycloak('/keycloak.json');        
+        const keycloak = Keycloak(config);        
 
         keycloak.onTokenExpired = () => {
             console.log('Token expired', keycloak.token, 'at ', new Date());
